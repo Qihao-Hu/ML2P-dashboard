@@ -10,19 +10,27 @@ index.html
 assets/dashboard.js
 assets/style.css
 dashboard-data.json
+data/all_models_summary.csv
+data/all_models_summary.json
 ```
 
 `dashboard-data.json` is a minimized snapshot containing only aggregate metrics
-used by the page. The private ML2P implementation, raw measurements, repository
-history, and secrets are not included.
+used by the page. The files under `data/` contain the fuller aggregate GPU, CPU,
+DRAM, and system measurements for 15 models across baseline, training, and
+inference phases. The current sweep used 20 warmup iterations, 200 training
+iterations, 200 inference iterations, and a five-second idle baseline on an
+NVIDIA RTX A6000.
+
+The private ML2P implementation, raw time-series, repository history, logs, and
+secrets are not included.
 
 ## Updating the data
 
-Replace `dashboard-data.json` with a new public-safe aggregate snapshot, then
-commit and push it to `main`:
+Replace `dashboard-data.json` and the aggregate files under `data/` with a new
+public-safe snapshot, then commit and push it to `main`:
 
 ```sh
-git add dashboard-data.json
+git add dashboard-data.json data/
 git commit -m "Update dashboard data"
 git push
 ```
