@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Power and energy benchmark results for ML2P." />
+    <meta name="theme-color" content="#091411" />
+    <title>ML2P · Power dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="assets/dashboard.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#dashboard">Skip to dashboard</a>
+
+    <header class="site-header">
+      <a class="brand" href="#dashboard" aria-label="ML2P dashboard">
+        <span class="brand-mark" aria-hidden="true">M²</span>
+        <span>
+          <strong>ML2P</strong>
+          <small>Power &amp; Energy Profiling</small>
+        </span>
+      </a>
+      <div class="header-actions">
+        <div class="live-status" id="live-status" role="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span id="status-label">Loading</span>
+        </div>
+        <button class="refresh-button" id="refresh-button" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.34 5.66M20 4v7h-7" /></svg>
+          Refresh
+        </button>
+      </div>
+    </header>
+
+    <main id="dashboard">
+      <section class="hero" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">Power profiling · benchmark results</p>
+          <h1 id="page-title">See what every<br /><em>watt</em> accomplishes.</h1>
+          <p class="hero-copy">
+            Training and inference efficiency across ML2P neural-network benchmarks,
+            loaded from a public-safe benchmark snapshot.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span>Data source</span>
+            <strong>Bundled snapshot</strong>
+          </div>
+          <div>
+            <span>Data branch</span>
+            <strong id="branch-label">—</strong>
+          </div>
+          <div>
+            <span>Last sync</span>
+            <strong id="sync-label">Waiting for data</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-shell" aria-label="Benchmark dashboard">
+        <div class="toolbar">
+          <div class="segmented-control" aria-label="Benchmark phase">
+            <button type="button" data-phase="train" class="active" aria-pressed="true">Training</button>
+            <button type="button" data-phase="infer" aria-pressed="false">Inference</button>
+            <button type="button" data-phase="baseline" aria-pressed="false">Baseline</button>
+          </div>
+          <label class="select-control">
+            <span>Compare by</span>
+            <select id="metric-select">
+              <option value="energy">GPU energy / sample</option>
+              <option value="throughput">Throughput</option>
+              <option value="power">Average GPU power</option>
+              <option value="utilization">GPU utilization</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="loading-panel" id="loading-panel" aria-live="polite">
+          <span class="loader" aria-hidden="true"></span>
+          <p>Loading benchmark summaries…</p>
+        </div>
+
+        <div id="dashboard-content" hidden>
+          <section class="stat-grid" aria-label="Summary metrics">
+            <article class="stat-card accent">
+              <p>Benchmarks</p>
+              <strong id="run-count">—</strong>
+              <span id="model-count">Across — models</span>
+            </article>
+            <article class="stat-card">
+              <p id="best-label">Best GPU efficiency</p>
+              <strong id="best-value">—</strong>
+              <span id="best-model">—</span>
+            </article>
+            <article class="stat-card">
+              <p id="energy-label">Measured GPU energy</p>
+              <strong id="total-energy">—</strong>
+              <span id="energy-context">Across the selected phase</span>
+            </article>
+            <article class="stat-card">
+              <p>Measurement device</p>
+              <strong class="device-value" id="device-name">—</strong>
+              <span>Hardware-reported metrics</span>
+            </article>
+          </section>
+
+          <section class="chart-panel" aria-labelledby="chart-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Model comparison</p>
+                <h2 id="chart-title">GPU energy per sample</h2>
+              </div>
+              <p id="chart-note">Lower is better</p>
+            </div>
+            <div class="bar-chart" id="bar-chart" role="img" aria-label="Benchmark comparison bar chart"></div>
+          </section>
+
+          <section class="results-panel" aria-labelledby="results-title">
+            <div class="section-heading results-heading">
+              <div>
+                <p class="eyebrow">All measurements</p>
+                <h2 id="results-title">Benchmark details</h2>
+              </div>
+              <label class="search-control">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4" /></svg>
+                <span class="sr-only">Filter benchmarks</span>
+                <input id="search-input" type="search" placeholder="Filter models" autocomplete="off" />
+              </label>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">Model</th>
+                    <th scope="col">Input</th>
+                    <th scope="col">Batch</th>
+                    <th scope="col">Throughput</th>
+                    <th scope="col">GPU energy / sample</th>
+                    <th scope="col">Avg GPU power</th>
+                    <th scope="col">GPU util.</th>
+                  </tr>
+                </thead>
+                <tbody id="results-body"></tbody>
+              </table>
+            </div>
+            <p class="empty-state" id="empty-state" hidden>No benchmarks match this filter.</p>
+          </section>
+        </div>
+
+        <section class="error-panel" id="error-panel" hidden aria-live="assertive">
+          <span aria-hidden="true">!</span>
+          <div>
+            <h2>Data could not be loaded</h2>
+            <p id="error-message">The repository did not return benchmark data.</p>
+          </div>
+          <button type="button" id="retry-button">Try again</button>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>ML2P · Neural-network power and energy profiling</p>
+      <p>Visualization-only public snapshot</p>
+    </footer>
+  </body>
+</html>

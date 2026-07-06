@@ -1,0 +1,321 @@
+{
+  "generated_at": "2026-07-03T18:08:48.018698+00:00",
+  "source_branch": "snapshot",
+  "runs": [
+    {
+      "path": "rnn_sweep_bigru",
+      "data": {
+        "config": {
+          "model": "bigru",
+          "run_name": "rnn_sweep_bigru",
+          "input_kind": "sequence",
+          "batch_size": 64
+        },
+        "monitor": {
+          "gpu": {
+            "name": "NVIDIA RTX A6000"
+          }
+        },
+        "phases": [
+          {
+            "label": "baseline",
+            "duration_s": 5.000369517001673,
+            "n_samples_workload": 0,
+            "throughput_samples_s": 0.0,
+            "gpu_avg_util_pct": 4.44,
+            "domains": {
+              "gpu": {
+                "energy_j": 425.894,
+                "energy_per_sample_j": null,
+                "avg_power_w": 85.17250546223133,
+                "peak_power_w": 105.181
+              }
+            }
+          },
+          {
+            "label": "train",
+            "duration_s": 190.18080674299563,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 6730.437323939591,
+            "gpu_avg_util_pct": 95.94406332453826,
+            "domains": {
+              "gpu": {
+                "energy_j": 43069.529,
+                "energy_per_sample_j": 0.033648069531250005,
+                "avg_power_w": 226.46622305163956,
+                "peak_power_w": 227.408
+              }
+            }
+          },
+          {
+            "label": "infer",
+            "duration_s": 68.86486680399685,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 18587.12663516994,
+            "gpu_avg_util_pct": 96.0,
+            "domains": {
+              "gpu": {
+                "energy_j": 14413.743,
+                "energy_per_sample_j": 0.01126073671875,
+                "avg_power_w": 209.30473939671427,
+                "peak_power_w": 226.726
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "rnn_sweep_bilstm",
+      "data": {
+        "config": {
+          "model": "bilstm",
+          "run_name": "rnn_sweep_bilstm",
+          "input_kind": "sequence",
+          "batch_size": 64
+        },
+        "monitor": {
+          "gpu": {
+            "name": "NVIDIA RTX A6000"
+          }
+        },
+        "phases": [
+          {
+            "label": "baseline",
+            "duration_s": 5.000445644007414,
+            "n_samples_workload": 0,
+            "throughput_samples_s": 0.0,
+            "gpu_avg_util_pct": 2.64,
+            "domains": {
+              "gpu": {
+                "energy_j": 421.753,
+                "energy_per_sample_j": null,
+                "avg_power_w": 84.34308260213432,
+                "peak_power_w": 112.926
+              }
+            }
+          },
+          {
+            "label": "train",
+            "duration_s": 204.31872738299717,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 6264.721870553888,
+            "gpu_avg_util_pct": 94.81286836935168,
+            "domains": {
+              "gpu": {
+                "energy_j": 52339.7,
+                "energy_per_sample_j": 0.040890390624999995,
+                "avg_power_w": 256.1669244439292,
+                "peak_power_w": 257.451
+              }
+            }
+          },
+          {
+            "label": "infer",
+            "duration_s": 78.8641560709948,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 16230.440592653058,
+            "gpu_avg_util_pct": 94.99618320610686,
+            "domains": {
+              "gpu": {
+                "energy_j": 17672.207,
+                "energy_per_sample_j": 0.013806411718749998,
+                "avg_power_w": 224.08414519888086,
+                "peak_power_w": 256.775
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "rnn_sweep_gru",
+      "data": {
+        "config": {
+          "model": "gru",
+          "run_name": "rnn_sweep_gru",
+          "input_kind": "sequence",
+          "batch_size": 64
+        },
+        "monitor": {
+          "gpu": {
+            "name": "NVIDIA RTX A6000"
+          }
+        },
+        "phases": [
+          {
+            "label": "baseline",
+            "duration_s": 5.000497526998515,
+            "n_samples_workload": 0,
+            "throughput_samples_s": 0.0,
+            "gpu_avg_util_pct": 3.84,
+            "domains": {
+              "gpu": {
+                "energy_j": 401.378,
+                "energy_per_sample_j": null,
+                "avg_power_w": 80.26761293909128,
+                "peak_power_w": 90.392
+              }
+            }
+          },
+          {
+            "label": "train",
+            "duration_s": 104.27972128801048,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 12274.677992902993,
+            "gpu_avg_util_pct": 95.9125,
+            "domains": {
+              "gpu": {
+                "energy_j": 22315.883,
+                "energy_per_sample_j": 0.017434283593750002,
+                "avg_power_w": 214.00021715023286,
+                "peak_power_w": 214.817
+              }
+            }
+          },
+          {
+            "label": "infer",
+            "duration_s": 34.01726596300432,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 37627.95050584229,
+            "gpu_avg_util_pct": 96.9735294117647,
+            "domains": {
+              "gpu": {
+                "energy_j": 7013.076,
+                "energy_per_sample_j": 0.005478965625,
+                "avg_power_w": 206.16224736071126,
+                "peak_power_w": 214.32
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "rnn_sweep_lstm",
+      "data": {
+        "config": {
+          "model": "lstm",
+          "run_name": "rnn_sweep_lstm",
+          "input_kind": "sequence",
+          "batch_size": 64
+        },
+        "monitor": {
+          "gpu": {
+            "name": "NVIDIA RTX A6000"
+          }
+        },
+        "phases": [
+          {
+            "label": "baseline",
+            "duration_s": 5.000479344991618,
+            "n_samples_workload": 0,
+            "throughput_samples_s": 0.0,
+            "gpu_avg_util_pct": 8.4,
+            "domains": {
+              "gpu": {
+                "energy_j": 413.684,
+                "energy_per_sample_j": null,
+                "avg_power_w": 82.72886886620935,
+                "peak_power_w": 97.604
+              }
+            }
+          },
+          {
+            "label": "train",
+            "duration_s": 113.35654193299706,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 11291.805291278064,
+            "gpu_avg_util_pct": 95.9150442477876,
+            "domains": {
+              "gpu": {
+                "energy_j": 24758.98,
+                "energy_per_sample_j": 0.019342953125,
+                "avg_power_w": 218.41686044581857,
+                "peak_power_w": 221.915
+              }
+            }
+          },
+          {
+            "label": "infer",
+            "duration_s": 31.709854436994647,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 40366.000498150315,
+            "gpu_avg_util_pct": 98.5632911392405,
+            "domains": {
+              "gpu": {
+                "energy_j": 7950.376,
+                "energy_per_sample_j": 0.00621123125,
+                "avg_power_w": 250.72256373162682,
+                "peak_power_w": 253.564
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "path": "rnn_sweep_rnn",
+      "data": {
+        "config": {
+          "model": "rnn",
+          "run_name": "rnn_sweep_rnn",
+          "input_kind": "sequence",
+          "batch_size": 64
+        },
+        "monitor": {
+          "gpu": {
+            "name": "NVIDIA RTX A6000"
+          }
+        },
+        "phases": [
+          {
+            "label": "baseline",
+            "duration_s": 5.000485377997393,
+            "n_samples_workload": 0,
+            "throughput_samples_s": 0.0,
+            "gpu_avg_util_pct": 4.44,
+            "domains": {
+              "gpu": {
+                "energy_j": 372.369,
+                "energy_per_sample_j": null,
+                "avg_power_w": 74.4665711129681,
+                "peak_power_w": 76.909
+              }
+            }
+          },
+          {
+            "label": "train",
+            "duration_s": 35.41270988500037,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 36145.214646286215,
+            "gpu_avg_util_pct": 97.72237960339943,
+            "domains": {
+              "gpu": {
+                "energy_j": 8470.1,
+                "energy_per_sample_j": 0.006617265625,
+                "avg_power_w": 239.18248638711634,
+                "peak_power_w": 243.885
+              }
+            }
+          },
+          {
+            "label": "infer",
+            "duration_s": 14.904464539999026,
+            "n_samples_workload": 1280000,
+            "throughput_samples_s": 85880.3076464016,
+            "gpu_avg_util_pct": 99.97315436241611,
+            "domains": {
+              "gpu": {
+                "energy_j": 3362.052,
+                "energy_per_sample_j": 0.0026266031250000003,
+                "avg_power_w": 225.57348443999987,
+                "peak_power_w": 243.885
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
