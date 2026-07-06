@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T19:12:40Z",
+  "generated_at": "2026-07-06T19:23:53Z",
   "source_branch": "benchmark snapshot",
   "runs": [
     {
@@ -23,12 +23,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 5.88,
+            "cpu_avg_util_pct": 0.5605989021201415,
             "domains": {
               "gpu": {
                 "energy_j": 394.381,
                 "energy_per_sample_j": null,
                 "avg_power_w": 78.86504004362457,
                 "peak_power_w": 133.695
+              },
+              "cpu_total": {
+                "energy_j": 1111.987021,
+                "energy_per_sample_j": null,
+                "avg_power_w": 222.36593785997752,
+                "peak_power_w": 231.02096688750024
               }
             }
           },
@@ -38,12 +45,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 4645.188072785815,
             "gpu_avg_util_pct": 96.42857142857143,
+            "cpu_avg_util_pct": 1.4926570491418627,
             "domains": {
               "gpu": {
                 "energy_j": 810.107,
                 "energy_per_sample_j": 0.063289609375,
                 "avg_power_w": 293.9921386000233,
                 "peak_power_w": 297.531
+              },
+              "cpu_total": {
+                "energy_j": 638.988965,
+                "energy_per_sample_j": 0.049921012890625,
+                "avg_power_w": 231.89249366091818,
+                "peak_power_w": 236.04137049484495
               }
             }
           },
@@ -53,12 +67,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 16751.059660995285,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.853763388283855,
             "domains": {
               "gpu": {
                 "energy_j": 236.521,
                 "energy_per_sample_j": 0.018478203125,
                 "avg_power_w": 309.5294829748645,
                 "peak_power_w": 299.068
+              },
+              "cpu_total": {
+                "energy_j": 183.88124299999998,
+                "energy_per_sample_j": 0.014365722109375,
+                "avg_power_w": 240.6410681274196,
+                "peak_power_w": 239.83883647931196
               }
             }
           }
@@ -86,12 +107,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 4.32,
+            "cpu_avg_util_pct": 0.5574348511228675,
             "domains": {
               "gpu": {
                 "energy_j": 400.738,
                 "energy_per_sample_j": null,
                 "avg_power_w": 80.13936258665585,
                 "peak_power_w": 283.818
+              },
+              "cpu_total": {
+                "energy_j": 1113.111286,
+                "energy_per_sample_j": null,
+                "avg_power_w": 222.59937652045173,
+                "peak_power_w": 241.5782773718704
               }
             }
           },
@@ -101,12 +129,19 @@
             "n_samples_workload": 3200,
             "throughput_samples_s": 207.4270149022773,
             "gpu_avg_util_pct": 99.35064935064935,
+            "cpu_avg_util_pct": 1.6044194028205718,
             "domains": {
               "gpu": {
                 "energy_j": 4561.492,
                 "energy_per_sample_j": 1.4254662500000002,
                 "avg_power_w": 295.68020908144337,
                 "peak_power_w": 298.557
+              },
+              "cpu_total": {
+                "energy_j": 3583.619366,
+                "energy_per_sample_j": 1.119881051875,
+                "avg_power_w": 232.2935836360536,
+                "peak_power_w": 246.01042708700464
               }
             }
           },
@@ -116,12 +151,19 @@
             "n_samples_workload": 3200,
             "throughput_samples_s": 645.7743999990713,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.5264129736856367,
             "domains": {
               "gpu": {
                 "energy_j": 1467.192,
                 "energy_per_sample_j": 0.4584975,
                 "avg_power_w": 296.0859479635742,
                 "peak_power_w": 299.232
+              },
+              "cpu_total": {
+                "energy_j": 1149.141773,
+                "energy_per_sample_j": 0.3591068040625,
+                "avg_power_w": 231.90198092904498,
+                "peak_power_w": 240.024613205961
               }
             }
           }
@@ -149,12 +191,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 6.6,
+            "cpu_avg_util_pct": 0.5718162324190905,
             "domains": {
               "gpu": {
                 "energy_j": 416.534,
                 "energy_per_sample_j": null,
                 "avg_power_w": 83.29969576771656,
                 "peak_power_w": 103.116
+              },
+              "cpu_total": {
+                "energy_j": 1111.727805,
+                "energy_per_sample_j": null,
+                "avg_power_w": 222.3265998286126,
+                "peak_power_w": 231.4124147395791
               }
             }
           },
@@ -164,12 +213,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 6703.0140994220055,
             "gpu_avg_util_pct": 90.78947368421052,
+            "cpu_avg_util_pct": 1.5227046939808129,
             "domains": {
               "gpu": {
                 "energy_j": 388.725,
                 "energy_per_sample_j": 0.030369140625000002,
                 "avg_power_w": 203.56477779670462,
                 "peak_power_w": 216.543
+              },
+              "cpu_total": {
+                "energy_j": 448.80604100000005,
+                "energy_per_sample_j": 0.035062971953125,
+                "avg_power_w": 235.02759536943523,
+                "peak_power_w": 240.99687159327988
               }
             }
           },
@@ -179,12 +235,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 18597.027410690505,
             "gpu_avg_util_pct": 95.71428571428571,
+            "cpu_avg_util_pct": 1.748891440073852,
             "domains": {
               "gpu": {
                 "energy_j": 139.336,
                 "energy_per_sample_j": 0.010885625000000001,
                 "avg_power_w": 202.44026650749785,
                 "peak_power_w": 216.543
+              },
+              "cpu_total": {
+                "energy_j": 163.29725000000002,
+                "energy_per_sample_j": 0.012757597656250001,
+                "avg_power_w": 237.2533933078422,
+                "peak_power_w": 240.55576728467344
               }
             }
           }
@@ -212,12 +275,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 5.28,
+            "cpu_avg_util_pct": 0.6030109854008735,
             "domains": {
               "gpu": {
                 "energy_j": 414.951,
                 "energy_per_sample_j": null,
                 "avg_power_w": 82.98214409393623,
                 "peak_power_w": 109.953
+              },
+              "cpu_total": {
+                "energy_j": 1116.629892,
+                "energy_per_sample_j": null,
+                "avg_power_w": 223.30430001985883,
+                "peak_power_w": 234.70706234298407
               }
             }
           },
@@ -227,12 +297,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 6378.693877076249,
             "gpu_avg_util_pct": 90.5,
+            "cpu_avg_util_pct": 1.6199932615970731,
             "domains": {
               "gpu": {
                 "energy_j": 474.047,
                 "energy_per_sample_j": 0.037034921875,
                 "avg_power_w": 236.23442940205976,
                 "peak_power_w": 247.174
+              },
+              "cpu_total": {
+                "energy_j": 475.165837,
+                "energy_per_sample_j": 0.037122331015625,
+                "avg_power_w": 236.79198555216493,
+                "peak_power_w": 243.2411447922601
               }
             }
           },
@@ -242,12 +319,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 16967.705081843946,
             "gpu_avg_util_pct": 96.75,
+            "cpu_avg_util_pct": 1.4863657207824745,
             "domains": {
               "gpu": {
                 "energy_j": 173.625,
                 "energy_per_sample_j": 0.013564453125,
                 "avg_power_w": 230.15764022149648,
                 "peak_power_w": 247.174
+              },
+              "cpu_total": {
+                "energy_j": 177.80618600000003,
+                "energy_per_sample_j": 0.013891108281250002,
+                "avg_power_w": 235.70022857621015,
+                "peak_power_w": 235.4880563670888
               }
             }
           }
@@ -275,12 +359,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 6.84,
+            "cpu_avg_util_pct": 0.18236674556275426,
             "domains": {
               "gpu": {
                 "energy_j": 426.477,
                 "energy_per_sample_j": null,
                 "avg_power_w": 85.28649475922349,
                 "peak_power_w": 290.854
+              },
+              "cpu_total": {
+                "energy_j": 1096.5072030000001,
+                "energy_per_sample_j": null,
+                "avg_power_w": 219.2785444985552,
+                "peak_power_w": 227.27753961786982
               }
             }
           },
@@ -290,12 +381,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 401.92862615091383,
             "gpu_avg_util_pct": 99.6845425867508,
+            "cpu_avg_util_pct": 1.2610569804547045,
             "domains": {
               "gpu": {
                 "energy_j": 9494.901,
                 "energy_per_sample_j": 0.741789140625,
                 "avg_power_w": 298.14629018507327,
                 "peak_power_w": 299.067
+              },
+              "cpu_total": {
+                "energy_j": 7314.9496579999995,
+                "energy_per_sample_j": 0.5714804420312499,
+                "avg_power_w": 229.69434893773726,
+                "peak_power_w": 243.55397626493175
               }
             }
           },
@@ -305,12 +403,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 1292.958782967982,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.2463102683264091,
             "domains": {
               "gpu": {
                 "energy_j": 2953.945,
                 "energy_per_sample_j": 0.23077695312500002,
                 "avg_power_w": 298.385088449559,
                 "peak_power_w": 299.564
+              },
+              "cpu_total": {
+                "energy_j": 2265.236816,
+                "energy_per_sample_j": 0.17697162625,
+                "avg_power_w": 228.81701849606458,
+                "peak_power_w": 236.1390324899678
               }
             }
           }
@@ -338,12 +443,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 1.68,
+            "cpu_avg_util_pct": 0.2157702624869102,
             "domains": {
               "gpu": {
                 "energy_j": 430.516,
                 "energy_per_sample_j": null,
                 "avg_power_w": 86.09503503950904,
                 "peak_power_w": 275.527
+              },
+              "cpu_total": {
+                "energy_j": 1087.4361199999998,
+                "energy_per_sample_j": null,
+                "avg_power_w": 217.46660020679312,
+                "peak_power_w": 227.280565822908
               }
             }
           },
@@ -353,12 +465,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 763.5202341051748,
             "gpu_avg_util_pct": 99.40119760479043,
+            "cpu_avg_util_pct": 1.3163715278890924,
             "domains": {
               "gpu": {
                 "energy_j": 4925.781,
                 "energy_per_sample_j": 0.384826640625,
                 "avg_power_w": 293.822926739908,
                 "peak_power_w": 295.954
+              },
+              "cpu_total": {
+                "energy_j": 3838.7611079999997,
+                "energy_per_sample_j": 0.2999032115625,
+                "avg_power_w": 228.98217030109376,
+                "peak_power_w": 246.84653740118458
               }
             }
           },
@@ -368,12 +487,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 3054.109266855277,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.2847552153410153,
             "domains": {
               "gpu": {
                 "energy_j": 1249.674,
                 "energy_per_sample_j": 0.09763078124999999,
                 "avg_power_w": 298.1750737459454,
                 "peak_power_w": 299.209
+              },
+              "cpu_total": {
+                "energy_j": 958.405505,
+                "energy_per_sample_j": 0.074875430078125,
+                "avg_power_w": 228.67774486137588,
+                "peak_power_w": 243.71350407656786
               }
             }
           }
@@ -401,12 +527,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 1.2,
+            "cpu_avg_util_pct": 0.20402109703968146,
             "domains": {
               "gpu": {
                 "energy_j": 405.472,
                 "energy_per_sample_j": null,
                 "avg_power_w": 81.08732125517125,
                 "peak_power_w": 83.035
+              },
+              "cpu_total": {
+                "energy_j": 1092.741344,
+                "energy_per_sample_j": null,
+                "avg_power_w": 218.5291916821275,
+                "peak_power_w": 229.44685970899974
               }
             }
           },
@@ -416,12 +549,19 @@
             "n_samples_workload": 541600,
             "throughput_samples_s": 2542340.8302892568,
             "gpu_avg_util_pct": 31.333333333333332,
+            "cpu_avg_util_pct": 1.138827410464327,
             "domains": {
               "gpu": {
                 "energy_j": 19.04,
                 "energy_per_sample_j": 0.000035155096011816835,
                 "avg_power_w": 89.37623598358095,
                 "peak_power_w": 85.644
+              },
+              "cpu_total": {
+                "energy_j": 49.117428000000004,
+                "energy_per_sample_j": 0.00009068949039881833,
+                "avg_power_w": 230.56359431904133,
+                "peak_power_w": 227.52618909164184
               }
             }
           },
@@ -431,12 +571,19 @@
             "n_samples_workload": 541600,
             "throughput_samples_s": 5315078.720785393,
             "gpu_avg_util_pct": 47.0,
+            "cpu_avg_util_pct": 1.0914760914760901,
             "domains": {
               "gpu": {
                 "energy_j": 11.81,
                 "energy_per_sample_j": 0.00002180576070901034,
                 "avg_power_w": 115.89933473499907,
                 "peak_power_w": 85.644
+              },
+              "cpu_total": {
+                "energy_j": 24.672972,
+                "energy_per_sample_j": 0.00004555570901033974,
+                "avg_power_w": 242.13217957114813,
+                "peak_power_w": 233.08429570846982
               }
             }
           }
@@ -464,12 +611,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 2.52,
+            "cpu_avg_util_pct": 1.0448654178476118,
             "domains": {
               "gpu": {
                 "energy_j": 401.641,
                 "energy_per_sample_j": null,
                 "avg_power_w": 80.32107837974668,
                 "peak_power_w": 83.535
+              },
+              "cpu_total": {
+                "energy_j": 1132.284637,
+                "energy_per_sample_j": null,
+                "avg_power_w": 226.4368505124228,
+                "peak_power_w": 264.2452387534887
               }
             }
           },
@@ -479,12 +633,19 @@
             "n_samples_workload": 541600,
             "throughput_samples_s": 2536563.015282549,
             "gpu_avg_util_pct": 66.66666666666667,
+            "cpu_avg_util_pct": 1.413810865678877,
             "domains": {
               "gpu": {
                 "energy_j": 31.984,
                 "energy_per_sample_j": 0.00005905465288035451,
                 "avg_power_w": 149.7958483766563,
                 "peak_power_w": 96.542
+              },
+              "cpu_total": {
+                "energy_j": 50.577385,
+                "energy_per_sample_j": 0.00009338512740029542,
+                "avg_power_w": 236.87726034103832,
+                "peak_power_w": 230.5593332247007
               }
             }
           },
@@ -494,12 +655,19 @@
             "n_samples_workload": 541600,
             "throughput_samples_s": 3887403.481306579,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.108173827689285,
             "domains": {
               "gpu": {
                 "energy_j": 55.198,
                 "energy_per_sample_j": 0.0001019165435745938,
                 "avg_power_w": 396.19072629460953,
                 "peak_power_w": 96.542
+              },
+              "cpu_total": {
+                "energy_j": 32.912147000000004,
+                "energy_per_sample_j": 0.000060768365952732654,
+                "avg_power_w": 236.2311573579651,
+                "peak_power_w": 228.9648313943612
               }
             }
           }
@@ -527,12 +695,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 0.0,
+            "cpu_avg_util_pct": 0.3019120240717145,
             "domains": {
               "gpu": {
                 "energy_j": 415.883,
                 "energy_per_sample_j": null,
                 "avg_power_w": 83.16821378403826,
                 "peak_power_w": 97.325
+              },
+              "cpu_total": {
+                "energy_j": 1112.861226,
+                "energy_per_sample_j": null,
+                "avg_power_w": 222.54980452659743,
+                "peak_power_w": 232.00719732546543
               }
             }
           },
@@ -542,12 +717,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 12167.026147576826,
             "gpu_avg_util_pct": 88.18181818181819,
+            "cpu_avg_util_pct": 1.3978538233153415,
             "domains": {
               "gpu": {
                 "energy_j": 198.616,
                 "energy_per_sample_j": 0.015516875000000001,
                 "avg_power_w": 188.7942238536812,
                 "peak_power_w": 124.378
+              },
+              "cpu_total": {
+                "energy_j": 248.805271,
+                "energy_per_sample_j": 0.019437911796875,
+                "avg_power_w": 236.50158108687017,
+                "peak_power_w": 238.11953430270032
               }
             }
           },
@@ -557,12 +739,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 38289.396211789935,
             "gpu_avg_util_pct": 97.75,
+            "cpu_avg_util_pct": 1.4561951799431427,
             "domains": {
               "gpu": {
                 "energy_j": 79.025,
                 "energy_per_sample_j": 0.006173828125,
                 "avg_power_w": 236.39215122161715,
                 "peak_power_w": 205.086
+              },
+              "cpu_total": {
+                "energy_j": 79.542032,
+                "energy_per_sample_j": 0.0062142212500000005,
+                "avg_power_w": 237.9387795889745,
+                "peak_power_w": 239.07758512703822
               }
             }
           }
@@ -590,12 +779,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 1.68,
+            "cpu_avg_util_pct": 0.3107653741733192,
             "domains": {
               "gpu": {
                 "energy_j": 410.823,
                 "energy_per_sample_j": null,
                 "avg_power_w": 82.15773987786632,
                 "peak_power_w": 98.259
+              },
+              "cpu_total": {
+                "energy_j": 1105.976478,
+                "energy_per_sample_j": null,
+                "avg_power_w": 221.17682746721275,
+                "peak_power_w": 230.98765573121457
               }
             }
           },
@@ -605,12 +801,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 11280.271014670252,
             "gpu_avg_util_pct": 88.41666666666667,
+            "cpu_avg_util_pct": 1.2987121701420599,
             "domains": {
               "gpu": {
                 "energy_j": 218.76,
                 "energy_per_sample_j": 0.017090624999999998,
                 "avg_power_w": 192.78688181009875,
                 "peak_power_w": 126.108
+              },
+              "cpu_total": {
+                "energy_j": 267.20585900000003,
+                "energy_per_sample_j": 0.020875457734375002,
+                "avg_power_w": 235.48082079904424,
+                "peak_power_w": 242.30873353004074
               }
             }
           },
@@ -620,12 +823,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 34528.9091327605,
             "gpu_avg_util_pct": 90.0,
+            "cpu_avg_util_pct": 1.2832668334780335,
             "domains": {
               "gpu": {
                 "energy_j": 84.974,
                 "energy_per_sample_j": 0.00663859375,
                 "avg_power_w": 229.22340036306178,
                 "peak_power_w": 208.548
+              },
+              "cpu_total": {
+                "energy_j": 87.355978,
+                "energy_per_sample_j": 0.006824685781249999,
+                "avg_power_w": 235.64895520042384,
+                "peak_power_w": 233.61437081568852
               }
             }
           }
@@ -653,12 +863,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 9.84,
+            "cpu_avg_util_pct": 0.21917491958860816,
             "domains": {
               "gpu": {
                 "energy_j": 432.745,
                 "energy_per_sample_j": null,
                 "avg_power_w": 86.5420891132355,
                 "peak_power_w": 265.288
+              },
+              "cpu_total": {
+                "energy_j": 1103.0470420000001,
+                "energy_per_sample_j": null,
+                "avg_power_w": 220.5917928684441,
+                "peak_power_w": 231.1354108394899
               }
             }
           },
@@ -668,12 +885,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 1311.7196396681,
             "gpu_avg_util_pct": 98.9795918367347,
+            "cpu_avg_util_pct": 1.3171940508466427,
             "domains": {
               "gpu": {
                 "energy_j": 2856.005,
                 "energy_per_sample_j": 0.223125390625,
                 "avg_power_w": 292.677956991429,
                 "peak_power_w": 295.727
+              },
+              "cpu_total": {
+                "energy_j": 2244.039299,
+                "energy_per_sample_j": 0.175315570234375,
+                "avg_power_w": 229.96487661604183,
+                "peak_power_w": 242.23654593333464
               }
             }
           },
@@ -683,12 +907,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 5073.487200851069,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.2257693211491418,
             "domains": {
               "gpu": {
                 "energy_j": 773.275,
                 "energy_per_sample_j": 0.060412109374999995,
                 "avg_power_w": 306.50006369047736,
                 "peak_power_w": 299.116
+              },
+              "cpu_total": {
+                "energy_j": 581.207862,
+                "energy_per_sample_j": 0.045406864218749995,
+                "avg_power_w": 230.3711444446105,
+                "peak_power_w": 237.09190399794682
               }
             }
           }
@@ -716,12 +947,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 4.68,
+            "cpu_avg_util_pct": 0.2080242459063406,
             "domains": {
               "gpu": {
                 "energy_j": 429.676,
                 "energy_per_sample_j": null,
                 "avg_power_w": 85.92857038725633,
                 "peak_power_w": 286.183
+              },
+              "cpu_total": {
+                "energy_j": 1099.00622,
+                "energy_per_sample_j": null,
+                "avg_power_w": 219.78428707049616,
+                "peak_power_w": 228.4090408631264
               }
             }
           },
@@ -731,12 +969,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 502.28514639248516,
             "gpu_avg_util_pct": 99.60629921259843,
+            "cpu_avg_util_pct": 1.2702045252354723,
             "domains": {
               "gpu": {
                 "energy_j": 7536.474,
                 "energy_per_sample_j": 0.58878703125,
                 "avg_power_w": 295.73898018540297,
                 "peak_power_w": 298.452
+              },
+              "cpu_total": {
+                "energy_j": 5840.119021,
+                "energy_per_sample_j": 0.456259298515625,
+                "avg_power_w": 229.1722685478533,
+                "peak_power_w": 237.26254966945098
               }
             }
           },
@@ -746,12 +991,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 1590.9134767809023,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.319821082071006,
             "domains": {
               "gpu": {
                 "energy_j": 2393.714,
                 "energy_per_sample_j": 0.18700890625,
                 "avg_power_w": 297.5149892311813,
                 "peak_power_w": 298.625
+              },
+              "cpu_total": {
+                "energy_j": 1846.878084,
+                "energy_per_sample_j": 0.1442873503125,
+                "avg_power_w": 229.54869014116338,
+                "peak_power_w": 240.48834425179615
               }
             }
           }
@@ -779,12 +1031,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 4.32,
+            "cpu_avg_util_pct": 0.20474269378084434,
             "domains": {
               "gpu": {
                 "energy_j": 415.95,
                 "energy_per_sample_j": null,
                 "avg_power_w": 83.18168659044647,
                 "peak_power_w": 99.419
+              },
+              "cpu_total": {
+                "energy_j": 1099.901237,
+                "energy_per_sample_j": null,
+                "avg_power_w": 219.95826415814014,
+                "peak_power_w": 230.12254079575632
               }
             }
           },
@@ -794,12 +1053,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 35529.25127936371,
             "gpu_avg_util_pct": 73.5,
+            "cpu_avg_util_pct": 1.7243661023538275,
             "domains": {
               "gpu": {
                 "energy_j": 77.647,
                 "energy_per_sample_j": 0.006066171875000001,
                 "avg_power_w": 215.5265448506839,
                 "peak_power_w": 93.307
+              },
+              "cpu_total": {
+                "energy_j": 85.94857099999999,
+                "energy_per_sample_j": 0.006714732109374999,
+                "avg_power_w": 238.56940438759625,
+                "peak_power_w": 237.52617874331418
               }
             }
           },
@@ -809,12 +1075,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 85473.77307229521,
             "gpu_avg_util_pct": 98.0,
+            "cpu_avg_util_pct": 1.7777006149099162,
             "domains": {
               "gpu": {
                 "energy_j": 45.123,
                 "energy_per_sample_j": 0.0035252343749999997,
                 "avg_power_w": 301.3150829954044,
                 "peak_power_w": 93.307
+              },
+              "cpu_total": {
+                "energy_j": 37.15054,
+                "energy_per_sample_j": 0.0029023859375,
+                "avg_power_w": 248.07787699009577,
+                "peak_power_w": 237.11990983014582
               }
             }
           }
@@ -842,12 +1115,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 7.56,
+            "cpu_avg_util_pct": 0.2671577259010618,
             "domains": {
               "gpu": {
                 "energy_j": 440.082,
                 "energy_per_sample_j": null,
                 "avg_power_w": 88.00274542488027,
                 "peak_power_w": 288.441
+              },
+              "cpu_total": {
+                "energy_j": 1097.711851,
+                "energy_per_sample_j": null,
+                "avg_power_w": 219.50831111798965,
+                "peak_power_w": 237.08059610413085
               }
             }
           },
@@ -857,12 +1137,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 311.6634507019519,
             "gpu_avg_util_pct": 99.75550122249389,
+            "cpu_avg_util_pct": 1.2580257391955236,
             "domains": {
               "gpu": {
                 "energy_j": 12155.943,
                 "energy_per_sample_j": 0.9496830468749999,
                 "avg_power_w": 295.98149546220606,
                 "peak_power_w": 299.731
+              },
+              "cpu_total": {
+                "energy_j": 9382.535064,
+                "energy_per_sample_j": 0.733010551875,
+                "avg_power_w": 228.4525979983046,
+                "peak_power_w": 244.94806902637745
               }
             }
           },
@@ -872,12 +1159,19 @@
             "n_samples_workload": 12800,
             "throughput_samples_s": 975.1056964661075,
             "gpu_avg_util_pct": 99.65648854961832,
+            "cpu_avg_util_pct": 1.2939890484818473,
             "domains": {
               "gpu": {
                 "energy_j": 3907.362,
                 "energy_per_sample_j": 0.30526265625,
                 "avg_power_w": 297.6633550277502,
                 "peak_power_w": 297.883
+              },
+              "cpu_total": {
+                "energy_j": 3006.8749310000003,
+                "energy_per_sample_j": 0.234912103984375,
+                "avg_power_w": 229.06413076400267,
+                "peak_power_w": 238.94415963192108
               }
             }
           }
@@ -905,12 +1199,19 @@
             "n_samples_workload": 0,
             "throughput_samples_s": 0.0,
             "gpu_avg_util_pct": 8.16,
+            "cpu_avg_util_pct": 1.536993256637347,
             "domains": {
               "gpu": {
                 "energy_j": 445.424,
                 "energy_per_sample_j": null,
                 "avg_power_w": 89.07434546874691,
                 "peak_power_w": 291.908
+              },
+              "cpu_total": {
+                "energy_j": 1143.990785,
+                "energy_per_sample_j": null,
+                "avg_power_w": 228.77130643196813,
+                "peak_power_w": 266.6978643808981
               }
             }
           },
@@ -920,12 +1221,19 @@
             "n_samples_workload": 3200,
             "throughput_samples_s": 134.32869048238092,
             "gpu_avg_util_pct": 99.5798319327731,
+            "cpu_avg_util_pct": 1.6533712530880382,
             "domains": {
               "gpu": {
                 "energy_j": 7087.61,
                 "energy_per_sample_j": 2.214878125,
                 "avg_power_w": 297.52167810932116,
                 "peak_power_w": 300.487
+              },
+              "cpu_total": {
+                "energy_j": 5503.460215,
+                "energy_per_sample_j": 1.7198313171875,
+                "avg_power_w": 231.02268868838516,
+                "peak_power_w": 280.10782049223434
               }
             }
           },
@@ -935,12 +1243,19 @@
             "n_samples_workload": 3200,
             "throughput_samples_s": 387.97160352481546,
             "gpu_avg_util_pct": 100.0,
+            "cpu_avg_util_pct": 1.5241078258326661,
             "domains": {
               "gpu": {
                 "energy_j": 2448.303,
                 "energy_per_sample_j": 0.7650946875,
                 "avg_power_w": 296.8350127576926,
                 "peak_power_w": 299.326
+              },
+              "cpu_total": {
+                "energy_j": 1896.188933,
+                "energy_per_sample_j": 0.5925590415624999,
+                "avg_power_w": 229.89608153813091,
+                "peak_power_w": 259.7076734356237
               }
             }
           }

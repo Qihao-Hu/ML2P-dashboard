@@ -3,6 +3,9 @@
 A static Bootstrap dashboard for viewing public ML2P benchmark results. It is
 served directly by GitHub Pages and has no backend or build step.
 
+The page supports GPU and aggregate CPU energy per sample, average power, peak
+power, and utilization comparisons for every benchmark phase.
+
 ## Files
 
 ```text

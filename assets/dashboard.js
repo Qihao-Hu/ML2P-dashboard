@@ -20,6 +20,13 @@ const metricDefinitions = {
     format: (value) => formatEnergyPerSample(value),
     ascending: true,
   },
+  cpuEnergy: {
+    title: "CPU energy per sample",
+    note: "Lower is better",
+    value: (run) => run.phase.cpu?.energyPerSample,
+    format: (value) => formatEnergyPerSample(value),
+    ascending: true,
+  },
   throughput: {
     title: "Workload throughput",
     note: "Higher is better",
@@ -34,10 +41,38 @@ const metricDefinitions = {
     format: (value) => `${formatNumber(value, 1)} W`,
     ascending: false,
   },
+  gpuPeakPower: {
+    title: "Peak GPU power",
+    note: "Highest sampled GPU power",
+    value: (run) => run.phase.gpu?.peakPower,
+    format: (value) => formatPower(value),
+    ascending: false,
+  },
+  cpuPower: {
+    title: "Average CPU power",
+    note: "Aggregate package power",
+    value: (run) => run.phase.cpu?.avgPower,
+    format: (value) => formatPower(value),
+    ascending: false,
+  },
+  cpuPeakPower: {
+    title: "Peak CPU power",
+    note: "Aggregate sampled package power",
+    value: (run) => run.phase.cpu?.peakPower,
+    format: (value) => formatPower(value),
+    ascending: false,
+  },
   utilization: {
     title: "Average GPU utilization",
     note: "Measured over the selected phase",
     value: (run) => run.phase.gpuUtilization,
+    format: (value) => `${formatNumber(value, 1)}%`,
+    ascending: false,
+  },
+  cpuUtilization: {
+    title: "Average CPU utilization",
+    note: "Measured over the selected phase",
+    value: (run) => run.phase.cpuUtilization,
     format: (value) => `${formatNumber(value, 1)}%`,
     ascending: false,
   },
@@ -69,6 +104,15 @@ const elements = {
   energyLabel: document.querySelector("#energy-label"),
   totalEnergy: document.querySelector("#total-energy"),
   energyContext: document.querySelector("#energy-context"),
+  cpuEnergyLabel: document.querySelector("#cpu-energy-label"),
+  totalCpuEnergy: document.querySelector("#total-cpu-energy"),
+  cpuEnergyContext: document.querySelector("#cpu-energy-context"),
+  gpuPeakLabel: document.querySelector("#gpu-peak-label"),
+  gpuPeakValue: document.querySelector("#gpu-peak-value"),
+  gpuPeakModel: document.querySelector("#gpu-peak-model"),
+  cpuPeakLabel: document.querySelector("#cpu-peak-label"),
+  cpuPeakValue: document.querySelector("#cpu-peak-value"),
+  cpuPeakModel: document.querySelector("#cpu-peak-model"),
   deviceName: document.querySelector("#device-name"),
 };
 
@@ -153,13 +197,16 @@ function normalizeRun({ path, data }) {
 
 function normalizePhase(phase) {
   const gpu = phase.domains?.gpu || {};
+  const cpu = phase.domains?.cpu_total || {};
   const system = phase.domains?.system || {};
   return {
     duration: numeric(phase.duration_s),
     samples: numeric(phase.n_samples_workload),
     throughput: numeric(phase.throughput_samples_s ?? phase.throughput_img_s),
     gpuUtilization: numeric(phase.gpu_avg_util_pct),
+    cpuUtilization: numeric(phase.cpu_avg_util_pct),
     gpu: normalizeDomain(gpu),
+    cpu: normalizeDomain(cpu),
     system: normalizeDomain(system),
   };
 }
@@ -191,6 +238,13 @@ function renderStats(runs) {
   const efficientRuns = runs.filter((run) => isNumber(run.phase.gpu?.energyPerSample));
   const best = efficientRuns.sort((a, b) => a.phase.gpu.energyPerSample - b.phase.gpu.energyPerSample)[0];
   const totalEnergy = runs.reduce((sum, run) => sum + (run.phase.gpu?.energy || 0), 0);
+  const totalCpuEnergy = runs.reduce((sum, run) => sum + (run.phase.cpu?.energy || 0), 0);
+  const gpuPeak = runs
+    .filter((run) => isNumber(run.phase.gpu?.peakPower))
+    .sort((a, b) => b.phase.gpu.peakPower - a.phase.gpu.peakPower)[0];
+  const cpuPeak = runs
+    .filter((run) => isNumber(run.phase.cpu?.peakPower))
+    .sort((a, b) => b.phase.cpu.peakPower - a.phase.cpu.peakPower)[0];
   const devices = [...new Set(state.runs.map((run) => run.device))];
   const phaseName = phaseTitle(state.phase);
 
@@ -202,6 +256,15 @@ function renderStats(runs) {
   elements.energyLabel.textContent = `${phaseName} GPU energy`;
   elements.totalEnergy.textContent = formatEnergy(totalEnergy);
   elements.energyContext.textContent = `Total across ${runs.length} run${runs.length === 1 ? "" : "s"}`;
+  elements.cpuEnergyLabel.textContent = `${phaseName} CPU energy`;
+  elements.totalCpuEnergy.textContent = formatEnergy(totalCpuEnergy);
+  elements.cpuEnergyContext.textContent = `Aggregate packages across ${runs.length} run${runs.length === 1 ? "" : "s"}`;
+  elements.gpuPeakLabel.textContent = `Peak ${phaseName.toLowerCase()} GPU power`;
+  elements.gpuPeakValue.textContent = gpuPeak ? formatPower(gpuPeak.phase.gpu.peakPower) : "n/a";
+  elements.gpuPeakModel.textContent = gpuPeak ? gpuPeak.model : "Peak power unavailable";
+  elements.cpuPeakLabel.textContent = `Peak ${phaseName.toLowerCase()} CPU power`;
+  elements.cpuPeakValue.textContent = cpuPeak ? formatPower(cpuPeak.phase.cpu.peakPower) : "n/a";
+  elements.cpuPeakModel.textContent = cpuPeak ? cpuPeak.model : "Peak power unavailable";
   elements.deviceName.textContent = devices.length === 1 ? devices[0] : `${devices.length} devices`;
   elements.deviceName.title = devices.join(", ");
 }
@@ -268,8 +331,13 @@ function renderTable(runs) {
       formatInteger(run.batchSize),
       isNumber(run.phase.throughput) ? `${formatNumber(run.phase.throughput, 1)}/s` : "n/a",
       formatEnergyPerSample(run.phase.gpu?.energyPerSample),
-      isNumber(run.phase.gpu?.avgPower) ? `${formatNumber(run.phase.gpu.avgPower, 1)} W` : "n/a",
+      formatEnergyPerSample(run.phase.cpu?.energyPerSample),
+      formatPower(run.phase.gpu?.avgPower),
+      formatPower(run.phase.gpu?.peakPower),
+      formatPower(run.phase.cpu?.avgPower),
+      formatPower(run.phase.cpu?.peakPower),
       isNumber(run.phase.gpuUtilization) ? `${formatNumber(run.phase.gpuUtilization, 1)}%` : "n/a",
+      isNumber(run.phase.cpuUtilization) ? `${formatNumber(run.phase.cpuUtilization, 1)}%` : "n/a",
     ];
 
     values.forEach((value) => {
@@ -343,6 +411,10 @@ function formatEnergy(value) {
   if (value >= 1_000_000) return `${formatNumber(value / 1_000_000, 2)} MJ`;
   if (value >= 1_000) return `${formatNumber(value / 1_000, 2)} kJ`;
   return `${formatNumber(value, 1)} J`;
+}
+
+function formatPower(value) {
+  return isNumber(value) ? `${formatNumber(value, 1)} W` : "n/a";
 }
 
 function formatEnergyPerSample(value) {

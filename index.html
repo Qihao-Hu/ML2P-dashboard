@@ -79,9 +79,14 @@
             <span class="text-secondary small text-nowrap">Compare by</span>
             <select class="form-select" id="metric-select">
               <option value="energy">GPU energy / sample</option>
+              <option value="cpuEnergy">CPU energy / sample</option>
               <option value="throughput">Throughput</option>
               <option value="power">Average GPU power</option>
+              <option value="gpuPeakPower">Peak GPU power</option>
+              <option value="cpuPower">Average CPU power</option>
+              <option value="cpuPeakPower">Peak CPU power</option>
               <option value="utilization">GPU utilization</option>
+              <option value="cpuUtilization">CPU utilization</option>
             </select>
           </label>
         </div>
@@ -120,6 +125,33 @@
                 <p class="metric-label" id="energy-label">Measured GPU energy</p>
                 <strong class="metric-value" id="total-energy">—</strong>
                 <span class="metric-detail" id="energy-context">Across the selected phase</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card metric-card h-100">
+              <div class="card-body">
+                <p class="metric-label" id="cpu-energy-label">Measured CPU energy</p>
+                <strong class="metric-value" id="total-cpu-energy">—</strong>
+                <span class="metric-detail" id="cpu-energy-context">Aggregate CPU packages</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card metric-card h-100">
+              <div class="card-body">
+                <p class="metric-label" id="gpu-peak-label">Peak GPU power</p>
+                <strong class="metric-value" id="gpu-peak-value">—</strong>
+                <span class="metric-detail" id="gpu-peak-model">—</span>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="card metric-card h-100">
+              <div class="card-body">
+                <p class="metric-label" id="cpu-peak-label">Peak CPU power</p>
+                <strong class="metric-value" id="cpu-peak-value">—</strong>
+                <span class="metric-detail" id="cpu-peak-model">—</span>
               </div>
             </article>
           </div>
@@ -167,8 +199,13 @@
                   <th scope="col">Batch</th>
                   <th scope="col">Throughput</th>
                   <th scope="col">GPU energy / sample</th>
+                  <th scope="col">CPU energy / sample</th>
                   <th scope="col">Avg GPU power</th>
+                  <th scope="col">Peak GPU power</th>
+                  <th scope="col">Avg CPU power</th>
+                  <th scope="col">Peak CPU power</th>
                   <th scope="col">GPU util.</th>
+                  <th scope="col">CPU util.</th>
                 </tr>
               </thead>
               <tbody id="results-body"></tbody>
